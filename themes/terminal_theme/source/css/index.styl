@@ -1,0 +1,121 @@
+#code-pl
+  // 按照这个顺序找，哪个有就用哪个，Consolas 是 Windows 自带最平衡的
+  font-family: "JetBrains Mono", "Fira Code", "Consolas", "Cascadia Code", "Courier New", monospace !important
+  -webkit-font-smoothing: antialiased // 让文字边缘更平滑
+  -moz-osx-font-smoothing: grayscale
+
+//third-party
+@import "_third-party/normalize.min.css"
+//project
+@import "var"
+@import "_function/*"
+@import "_extend/*"
+@import "_global/*"
+@import "_layout/*"
+@import "_page/*"
+
+// 隐藏滚动条的核心代码
+::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+    display: none;
+}
+
+body {
+    scrollbar-width: none; /* 针对 Firefox 火狐浏览器 */
+    -ms-overflow-style: none; /* 针对 IE/Edge */
+    overflow-y: auto; /* 保证还能滚动，只是看不见条 */
+}
+
+#code-pl
+#code-pl
+  background-color: #282a36 !important
+  color: #c0caf5 !important
+
+.code-pl-input
+  color: #bb9af7 !important 
+  text-shadow: 0 0 8px rgba(187, 154, 247, 0.6) // 紫色光晕
+  font-weight: bold
+
+.code-pl-output
+  color: #0db9d7 !important 
+  text-shadow: 0 0 5px rgba(13, 185, 215, 0.4) // 蓝色光晕
+
+// --- 链接完全同步 .code-pl-output 风格 ---
+
+#code-pl a
+  color: #0db9d7 !important                     // 1. 文字颜色：亮蓝
+  text-shadow: 0 0 5px rgba(13, 185, 215, 0.4) !important // 2. 蓝色光晕：完全同步
+  text-decoration: underline !important         // 3. 开启下划线
+  text-decoration-color: #0db9d7 !important     // 4. 下划线颜色：强制亮蓝
+  border-bottom: none !important                // 5. 抹除可能存在的边框线，只留 decoration 线
+  font-weight: inherit !important               // 6. 保持与周围文字粗细一致
+
+#code-pl a:hover
+  color: #0db9d7 !important                     // 7. 悬停保持蓝色
+  filter: brightness(1.2) !important            // 8. 悬停微亮反馈
+  text-decoration: underline !important         // 9. 悬停不掉线
+
+  // --- Markdown 代码块 (Code Block) 美化 ---
+
+// 2. 大段代码块：从透明改为浅灰色，依然不要黑框
+.highlight, pre, .hljs
+  background-color: #f4f4f6 !important // 1. 浅灰色背景（比纯白深一点，很有质感）
+  border: none !important
+  box-shadow: none !important
+  border-radius: 6px !important        // 2. 加上圆角，看起来更现代
+  padding: 15px !important             // 3. 增加内边距，文字不贴边
+  margin: 15px 0 !important
+
+// 3. 代码块内部文字：改为高对比度的深色
+.highlight .code, 
+pre code, 
+.hljs
+  color: #24292e !important           // 4. 颜色：深灰黑色（GitHub 同款），在灰底上极清晰
+  font-weight: 600 !important
+  line-height: 1.6 !important
+  font-family: 'JetBrains Mono', monospace !important
+  text-shadow: none !important        // 5. 白色/浅色背景下绝对不要光晕
+
+// 4. 强制抹除插件自带的杂色，统一为深色
+.highlight .line,
+.hljs-comment,
+.hljs-quote,
+.hljs-keyword,
+.hljs-string
+  color: #24292e !important           // 6. 统一颜色，防止出现看不清的浅色关键词
+  opacity: 1 !important
+
+  // --- 解决代码块内颜色过浅的问题 ---
+
+// 1. 锁定所有可能被插件染色的子元素
+.highlight .code span,
+.hljs-string,
+.hljs-attr,
+.hljs-keyword,
+.hljs-literal,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-variable
+  color: #24292e !important // 强行改为深灰色（和你刚才设置的 code 颜色一致）
+  opacity: 1 !important      // 确保没有任何透明度
+  font-weight: 600 !important // 保持加粗感
+
+// 2. 针对 $ 符号后面的命令部分（通常被识别为字符串或函数）
+.highlight .string, 
+.highlight .attribute, 
+.highlight .function
+  color: #24292e !important // 统一为深色，不再显示浅绿色
+
+  // --- 修复标题乱码/方块问题 ---
+
+// 1. 针对所有标题，强制使用系统通用字体，防止乱码
+h1, h2, h3, h4, h5, h6
+  font-family: inherit !important // 使用和你正文一样的字体
+  &::before, &::after
+    content: none !important     // 核心：强力抹除主题可能自动添加的乱码图标
+    display: none !important
+
+    
