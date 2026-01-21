@@ -13,7 +13,7 @@ timezone: Asia/Shanghai
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://tanxingge.cc
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -100,5 +100,13 @@ theme: terminal_theme
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
+
+# Sitemap 自动生成插件配置(让Bing看到菜单)
+sitemap:
+  path: sitemap.xml
+
+# 部署配置
 deploy:
-  type: ''
+  type: git
+  repo: https://github.com/QuietRise/TanXing-Pavilion
+  branch: main

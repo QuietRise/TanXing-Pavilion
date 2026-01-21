@@ -44,38 +44,36 @@ body {
 // --- 链接完全同步 .code-pl-output 风格 ---
 
 #code-pl a
-  color: #0db9d7 !important                     // 1. 文字颜色：亮蓝
-  text-shadow: 0 0 5px rgba(13, 185, 215, 0.4) !important // 2. 蓝色光晕：完全同步
-  text-decoration: underline !important         // 3. 开启下划线
-  text-decoration-color: #0db9d7 !important     // 4. 下划线颜色：强制亮蓝
-  border-bottom: none !important                // 5. 抹除可能存在的边框线，只留 decoration 线
-  font-weight: inherit !important               // 6. 保持与周围文字粗细一致
+  color: #0db9d7 !important 
+  text-shadow: 0 0 5px rgba(13, 185, 215, 0.4) 
+  text-decoration: underline !important 
+  text-decoration-color: #0db9d7 !important 
 
 #code-pl a:hover
-  color: #0db9d7 !important                     // 7. 悬停保持蓝色
-  filter: brightness(1.2) !important            // 8. 悬停微亮反馈
-  text-decoration: underline !important         // 9. 悬停不掉线
+  color: #0db9d7 !important 
+  filter: brightness(1.2) !important 
+  text-decoration: underline !important 
 
   // --- Markdown 代码块 (Code Block) 美化 ---
 
 // 2. 大段代码块：从透明改为浅灰色，依然不要黑框
 .highlight, pre, .hljs
-  background-color: #f4f4f6 !important // 1. 浅灰色背景（比纯白深一点，很有质感）
+  background-color: #f4f4f6 !important 
   border: none !important
   box-shadow: none !important
-  border-radius: 6px !important        // 2. 加上圆角，看起来更现代
-  padding: 15px !important             // 3. 增加内边距，文字不贴边
+  border-radius: 6px !important 
+  padding: 15px !important 
   margin: 15px 0 !important
 
 // 3. 代码块内部文字：改为高对比度的深色
 .highlight .code, 
 pre code, 
 .hljs
-  color: #24292e !important           // 4. 颜色：深灰黑色（GitHub 同款），在灰底上极清晰
+  color: #24292e !important 
   font-weight: 600 !important
   line-height: 1.6 !important
   font-family: 'JetBrains Mono', monospace !important
-  text-shadow: none !important        // 5. 白色/浅色背景下绝对不要光晕
+  text-shadow: none !important 
 
 // 4. 强制抹除插件自带的杂色，统一为深色
 .highlight .line,
@@ -83,10 +81,8 @@ pre code,
 .hljs-quote,
 .hljs-keyword,
 .hljs-string
-  color: #24292e !important           // 6. 统一颜色，防止出现看不清的浅色关键词
+  color: #24292e !important
   opacity: 1 !important
-
-  // --- 解决代码块内颜色过浅的问题 ---
 
 // 1. 锁定所有可能被插件染色的子元素
 .highlight .code span,
@@ -99,11 +95,10 @@ pre code,
 .hljs-addition,
 .hljs-variable,
 .hljs-template-variable
-  color: #24292e !important // 强行改为深灰色（和你刚才设置的 code 颜色一致）
+  color: #24292e !important // 强行改为深灰色
   opacity: 1 !important      // 确保没有任何透明度
   font-weight: 600 !important // 保持加粗感
 
-// 2. 针对 $ 符号后面的命令部分（通常被识别为字符串或函数）
 .highlight .string, 
 .highlight .attribute, 
 .highlight .function
