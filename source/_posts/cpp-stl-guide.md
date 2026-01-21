@@ -1,5 +1,5 @@
 ---
-title: C++算法竞赛常用STL
+title: 适合编程算法比赛（ACM/ICPC/蓝桥杯）的 C++ STL 容器清单
 date: 2026-01-20T23:44:02+08:00
 tags:
     - 计科
