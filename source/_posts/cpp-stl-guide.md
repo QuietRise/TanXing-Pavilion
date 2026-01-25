@@ -1,8 +1,9 @@
 ---
 title: 适合编程算法竞赛的 C++ STL 容器清单
 date: 2026-01-20T23:44:02+08:00
-tags:
+categories:
     - 计科
+tags:
     - 笔记
 ---
 
