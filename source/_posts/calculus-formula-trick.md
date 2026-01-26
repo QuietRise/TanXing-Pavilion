@@ -7,10 +7,8 @@ tags:
     - 笔记
 mathjax: true
 ---
-<div align="center">
 
 ## 1. 导数公式
-</div>
 
 ### 基本求导公式（左右对照）
 
@@ -123,10 +121,8 @@ $$y \text{ 关于 } x \text{ 的二阶导数} = - \frac{x \text{ 关于 } y \tex
 
 </div>
 
-<div align="center">
-
+---
 ## 2. 常用等价无穷小
-</div>
 
 **条件：当 $x \to 0$ 时**
 
@@ -166,10 +162,7 @@ $$
 </div>
 
 ---
-<div align="center">
-
 ## 3. 积分表
-</div>
 
 ### 基本积分公式
 
@@ -267,10 +260,7 @@ $$
 </div>
 
 ---
-<div align="center">
-
 ## 4. 常见泰勒公式
-</div>
 
 <div align="center">
 
@@ -308,7 +298,6 @@ $$
 </div>
 
 ---
-
 ## 5. 三角恒等变换
 
 ### 1. 和角与差角公式
