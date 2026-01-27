@@ -29,7 +29,7 @@ terminal:
         - text: AUTHOR_NAME
           ending: "@"
         - type: url
-          url: https://github.com/AUTHOR_NAME
+          url: https://github.com/QuietRise
           text: GitHub
     - pwd:
       cmd: whereis me
@@ -51,8 +51,8 @@ terminal:
   post:
 
   Links:
-    Github: https://github.com
-    Bilibili: https://bilibili.com
+    tanxingge: https://tanxingge.cc
+    Github: https://github.com/QuietRise
     
 # disqus: disqus_name
 utterances: xxx/blog_comments

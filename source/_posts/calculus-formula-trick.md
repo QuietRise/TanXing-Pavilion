@@ -31,14 +31,14 @@ $$
 $$
 (\tan x)' = \sec^2 x \qquad (\cot x)' = -\csc^2 x
 $$
-</div>
+</div><!--more-->
 
 <div align="center">
 
 $$
 (\sec x)' = \sec x \tan x \qquad (\csc x)' = -\csc x \cot x
 $$
-</div><!--more-->
+</div>
 
 <div align="center">
 
