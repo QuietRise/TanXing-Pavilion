@@ -119,5 +119,59 @@ h1, h2, h3, h4, h5, h6
   background-position: center !important
   background-clip: border-box !important
   
-  // 1. 强化磨砂：将模糊度提升，增强玻璃质感
+  // 将终端模糊度提升，增强玻璃质感
   backdrop-filter: blur(12px) saturate(150%) !important
+
+// --- 0. 【核心定义】 ---
+// 1. 文章和终端 (0.9, 保持原样, 比较实)
+$card-bg = rgba(255, 255, 255, 0.6) 
+
+// 2. 顶栏滑动后的颜色 (0.5 = 50%透明度)
+// 这样既能看清导航，又能透出背景！
+$nav-scrolled-bg = rgba(255, 255, 255, 0.5)
+
+
+// --- 1. 全局背景 (保持不变) ---
+body
+  background-image: url('../img/bg.png')
+  background-size: cover
+  background-attachment: fixed
+  background-position: center
+  background-repeat: no-repeat
+
+// --- 2. 【核心分组 A】文章 & 终端 (保持原样) ---
+.recent-post-item, .post-block, article, .post, 
+#code-pl, #file-path
+  background-color: $card-bg !important
+  backdrop-filter: blur(10px) !important
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important
+  box-sizing: border-box !important
+  border-radius: 8px !important
+
+// --- 3. 【核心分组 B】顶栏 (精准打击 #nav-bar) ---
+
+// 3.1 第一步：先扒光所有背景！(默认状态)
+// 针对 #nav-bar 和它里面的 #nav-container，统统变透明
+#nav-bar, #nav-container
+  background-color: rgba(255, 255, 255, 0.2) !important 
+  backdrop-filter: blur(5px) !important
+  box-shadow: none !important
+  border-radius: 0 !important
+  backdrop-filter: none !important
+  transition: all 0.4s ease-in-out !important
+
+// 3.2 第二步：滑动变身！(使用你截图里的 .fixed 类名)
+// 只有当 #nav-bar 身上出现了 .fixed，才加上颜色和模糊
+#nav-bar.fixed
+  background-color: $nav-scrolled-bg !important  // 变成半透明 (0.5)
+  backdrop-filter: blur(12px) !important         // 加上毛玻璃
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) !important // 加上淡淡阴影
+
+// --- 4. 终端拼接圆角 (保持不变) ---
+#file-path
+  border-radius: 8px 8px 0 0 !important
+  margin-bottom: 0 !important
+
+#code-pl
+  border-radius: 0 0 8px 8px !important
+  margin-top: 0 !important
