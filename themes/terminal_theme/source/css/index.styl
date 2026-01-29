@@ -133,7 +133,7 @@ $nav-scrolled-bg = rgba(255, 255, 255, 0.5)
 
 // --- 1. 全局背景 (保持不变) ---
 body
-  background-image: url('../img/bg.png')
+  background-image: url('../img/bg.jpg')
   background-size: cover
   background-attachment: fixed
   background-position: center
@@ -163,7 +163,7 @@ body
 // 3.2 第二步：滑动变身！(使用你截图里的 .fixed 类名)
 // 只有当 #nav-bar 身上出现了 .fixed，才加上颜色和模糊
 #nav-bar.fixed
-  background-color: $nav-scrolled-bg !important  // 变成半透明 (0.5)
+  background-color: $nav-scrolled-bg !important  // 变成半透明 (0.2)
   backdrop-filter: blur(12px) !important         // 加上毛玻璃
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) !important // 加上淡淡阴影
 
