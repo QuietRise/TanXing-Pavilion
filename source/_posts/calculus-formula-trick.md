@@ -422,3 +422,40 @@ $$
 \cos A - \cos B = -2\sin\frac{A+B}{2}\sin\frac{A-B}{2}
 $$
 </div>
+
+## 7. 二级结论
+
+### 1. 斯特林公式
+
+**条件：当 $n \to \infty$ 时，用于阶乘的近似计算**
+
+<div align="center">
+
+$$
+n! \sim \sqrt{2\pi n} \left(\frac{n}{e}\right)^n
+$$
+</div>
+
+### 2. 区间再现公式
+
+<div align="center">
+
+$$
+\int_{a}^{b} f(x) \, dx = \int_{a}^{b} f(a+b-x) \, dx
+$$
+</div>
+
+### 3. 华里士公式 (点火公式)
+
+令 $I_n = \int_0^{\frac{\pi}{2}} \sin^n x \, dx = \int_0^{\frac{\pi}{2}} \cos^n x \, dx$ ，则：
+
+<div align="center">
+
+$$
+I_n =
+\begin{cases} 
+\frac{n-1}{n} \cdot \frac{n-3}{n-2} \cdots \frac{1}{2} \cdot \frac{\pi}{2}, & n \text{ 为正偶数} \\
+\frac{n-1}{n} \cdot \frac{n-3}{n-2} \cdots \frac{2}{3} \cdot 1, & n \text{ 为正奇数} 
+\end{cases}
+$$
+</div>
